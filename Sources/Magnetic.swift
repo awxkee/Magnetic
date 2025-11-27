@@ -125,7 +125,7 @@ extension Magnetic {
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         let previous = touch.previousLocation(in: self)
-        guard location.distance(from: previous) != 0 else { return }
+        guard location.distance(from: previous) > 1.5 else { return }
         
         isDragging = true
         
